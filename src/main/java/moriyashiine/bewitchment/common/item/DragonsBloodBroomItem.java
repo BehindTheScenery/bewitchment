@@ -24,7 +24,6 @@ public class DragonsBloodBroomItem extends BroomItem {
 		super(settings, broom);
 	}
 
-	@Environment(EnvType.CLIENT)
 	@Override
 	public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
 		if (stack.hasNbt() && stack.getNbt().contains("Sigil")) {

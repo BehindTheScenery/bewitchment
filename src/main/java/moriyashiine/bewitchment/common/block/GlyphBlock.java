@@ -92,7 +92,6 @@ public class GlyphBlock extends HorizontalFacingBlock implements BlockEntityProv
 		return Blocks.TORCH.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
 	}
 
-	@Environment(EnvType.CLIENT)
 	@Override
 	public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
 		return new ItemStack(this == BWObjects.GLYPH ? BWObjects.CHALK : this == BWObjects.GOLDEN_GLYPH ? BWObjects.GOLDEN_CHALK : this == BWObjects.FIERY_GLYPH ? BWObjects.FIERY_CHALK : BWObjects.ELDRITCH_CHALK);

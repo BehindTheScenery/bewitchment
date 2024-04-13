@@ -149,7 +149,6 @@ public class SnakeEntity extends BWTameableEntity {
 		}
 	}
 
-	@Environment(EnvType.CLIENT)
 	@Override
 	public void handleStatus(byte id) {
 		if (id == 4) {

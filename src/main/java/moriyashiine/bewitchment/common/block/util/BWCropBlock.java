@@ -51,7 +51,6 @@ public class BWCropBlock extends CropBlock {
 		return AGE_TO_SHAPE[modelAge];
 	}
 
-	@Environment(EnvType.CLIENT)
 	@Override
 	protected ItemConvertible getSeedsItem() {
 		return this == BWObjects.ACONITE_CROP ? BWObjects.ACONITE_SEEDS : this == BWObjects.BELLADONNA_CROP ? BWObjects.BELLADONNA_SEEDS : this == BWObjects.GARLIC_CROP ? BWObjects.GARLIC : BWObjects.MANDRAKE_SEEDS;

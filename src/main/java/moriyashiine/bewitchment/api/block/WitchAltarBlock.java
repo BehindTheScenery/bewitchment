@@ -130,7 +130,6 @@ public class WitchAltarBlock extends HorizontalFacingBlock implements BlockEntit
 		return super.onUse(state, world, pos, player, hand, hit);
 	}
 
-	@Environment(EnvType.CLIENT)
 	@Override
 	public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
 		if (unformed != null) {

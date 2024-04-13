@@ -107,8 +107,6 @@ public class BrazierBlock extends LanternBlock implements BlockEntityProvider {
 		super.onStateReplaced(state, world, pos, newState, moved);
 	}
 
-
-	@Environment(EnvType.CLIENT)
 	@Override
 	public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
 		if (state.get(Properties.LIT)) {

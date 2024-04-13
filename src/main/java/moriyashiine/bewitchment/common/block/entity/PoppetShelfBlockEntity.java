@@ -8,8 +8,6 @@ import moriyashiine.bewitchment.api.item.PoppetItem;
 import moriyashiine.bewitchment.client.network.packet.SyncPoppetShelfPacket;
 import moriyashiine.bewitchment.common.registry.BWBlockEntityTypes;
 import moriyashiine.bewitchment.common.world.BWWorldState;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -25,10 +23,8 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
 public class PoppetShelfBlockEntity extends BlockEntity {
-	@Environment(EnvType.CLIENT)
 	public DefaultedList<ItemStack> clientInventory = DefaultedList.ofSize(9, ItemStack.EMPTY);
 
 	public PoppetShelfBlockEntity(BlockPos pos, BlockState state) {
@@ -64,7 +60,6 @@ public class PoppetShelfBlockEntity extends BlockEntity {
 		return nbt;
 	}
 
-	@Nullable
 	@Override
 	public Packet<ClientPlayPacketListener> toUpdatePacket() {
 		return BlockEntityUpdateS2CPacket.create(this);
